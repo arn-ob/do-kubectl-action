@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
 LABEL maintainer="Arnob Almazee <github.com@arn-ob>"
 
@@ -15,6 +15,7 @@ RUN chmod +x ./kubectl
 RUN mv ./kubectl /usr/local/bin/kubectl
 
 ADD entrypoint.sh /entrypoint.sh
+
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
