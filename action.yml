@@ -1,16 +1,16 @@
 name: 'DigitalOcean kubectl'
-author: arn-ob
-description: An action allowing you to integrate with DigitalOcean via kubectl in a Github Action, easily...
+author: Arnob Almazee
+description: DigitalOcean kubectl in a Github Action
 branding:
-  color: 'white'
+  color: 'green'
   icon: 'command'
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/arn-ob/do-kubectl-action:latest'
 inputs:
-  eks_role_arn:
-    description: EKS role arn that allow access eks cluster (Mostly happen when you create your cluster with CDK).
-    required: false
+  do_k8s_token:
+    description: DigitalOcean access token for accessing the doctl.
+    required: true
   stdin:
     description: File to read and pass as stdin to kubectl
     required: false
