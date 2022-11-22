@@ -1,25 +1,13 @@
-name: 'EKS kubectl'
-author: Ian Belcher
-description: An action allowing you to integrate with EKS via kubectl in a Github Action, easily...
+name: 'DigitalOcean kubectl'
+author: arn-ob
+description: An action allowing you to integrate with DigitalOcean via kubectl in a Github Action, easily...
 branding:
   color: 'white'
   icon: 'command'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/ianbelcher/eks-kubectl-action:latest'
+  image: 'docker://ghcr.io/arn-ob/do-kubectl-action:latest'
 inputs:
-  aws_access_key_id:
-    description: Your AWS_ACCESS_KEY_ID
-    required: false
-  aws_secret_access_key:
-    description: Your AWS_SECRET_ACCESS_KEY
-    required: false
-  aws_region:
-    description: The region of the cluster
-    required: false
-  cluster_name:
-    description: The name of the cluster you're using
-    required: true
   eks_role_arn:
     description: EKS role arn that allow access eks cluster (Mostly happen when you create your cluster with CDK).
     required: false
