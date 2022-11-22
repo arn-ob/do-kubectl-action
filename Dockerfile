@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 LABEL maintainer="Arnob Almazee <github.com@arn-ob>"
 
-RUN wget https://github.com/digitalocean/doctl/releases/download/v1.84.0/doctl-1.84.0-linux-amd64.tar.gz
+RUN curl -LO https://github.com/digitalocean/doctl/releases/download/v1.84.0/doctl-1.84.0-linux-amd64.tar.gz
 
 RUN tar -xzf ~/doctl-1.84.0-linux-amd64.tar.gz
 
