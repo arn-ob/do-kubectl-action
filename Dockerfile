@@ -4,7 +4,7 @@ LABEL maintainer="Arnob Almazee <github.com@arn-ob>"
 
 RUN wget https://github.com/digitalocean/doctl/releases/download/v1.84.0/doctl-1.84.0-linux-amd64.tar.gz
 
-RUN tar xf ~/doctl-1.84.0-linux-amd64.tar.gz
+RUN tar -xzf ~/doctl-1.84.0-linux-amd64.tar.gz
 
 RUN chmod +x ./doctl
 
