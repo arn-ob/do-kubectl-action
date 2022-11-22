@@ -1,12 +1,12 @@
-FROM python:3.10.0a7-alpine3.13
+FROM alpine:latest
 
 LABEL maintainer="Arnob Almazee <github.com@arn-ob>"
 
-ENV PYTHONIOENCODING=UTF-8
+RUN wget https://github.com/digitalocean/doctl/releases/download/v1.84.0/doctl-1.84.0-linux-amd64.tar.gz
 
-RUN apk add --no-cache curl
+RUN tar xf ~/doctl-1.84.0-linux-amd64.tar.gz
 
-RUN pip install doctl
+RUN chmod +x ./doctl
 
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 
