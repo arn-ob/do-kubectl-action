@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  test-docker-image:
+  ghcr-build-push-image:
     
     name: Build docker image
     
