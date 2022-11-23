@@ -3,7 +3,7 @@ name: DigitalOcean docker image
 on:
   push:
     branches:
-      - build
+      - main
 
 jobs:
   ghcr-build-push-image:
@@ -23,7 +23,7 @@ jobs:
 
       - name: Build docker image
         run: |
-          if [[ ${{ github.ref }} == 'refs/heads/master' ]]; then
+          if [[ ${{ github.ref }} == 'refs/heads/main' ]]; then
             tag=latest
           else
             tag=${{ github.sha }}
