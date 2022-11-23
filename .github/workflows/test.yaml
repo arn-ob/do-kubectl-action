@@ -1,0 +1,20 @@
+name: DigitalOcean docker image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ghcr-build-push-image:
+    
+    name: Build docker image
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Login to GitHub Container Registry
+        uses: arn-ob/do-kubectl-action
+        with:
+          do_access_token: ${{ secrets.DO_ACCESS_TOKEN }}
