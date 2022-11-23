@@ -17,4 +17,5 @@ jobs:
       - name: Login to GitHub Container Registry
         uses: arn-ob/do-kubectl-action@latest
         with:
+          registry: ghcr.io
           do_access_token: ${{ secrets.DO_ACCESS_TOKEN }}
