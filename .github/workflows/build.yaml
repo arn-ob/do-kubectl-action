@@ -3,7 +3,7 @@ name: DigitalOcean docker image
 on:
   push:
     branches:
-      - build
+      - main
 
 jobs:
   ghcr-build-push-image:
