@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "${DO_ACCESS_TOKEN}"
+echo "${INPUT_DO_ACCESS_TOKEN}"
 
 echo "DigitalOcean version"
 
