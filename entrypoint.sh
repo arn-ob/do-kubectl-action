@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "${INPUT_DO_ACCESS_TOKEN}"
+echo "Hello - ${INPUT_DO_ACCESS_TOKEN}"
 
 echo "DigitalOcean version"
 
@@ -12,7 +12,7 @@ doctl auth init -t "Access Tokens"
 
 echo "DigitalOcean add the cluster kubeconfig"
 
-doctl kubernetes cluster kubeconfig save <Cluster-Certificate>
+# doctl kubernetes cluster kubeconfig save <Cluster-Certificate>
 
 echo "Kubectl pod list"
 
