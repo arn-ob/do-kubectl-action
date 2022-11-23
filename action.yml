@@ -11,6 +11,9 @@ inputs:
   do_access_token:
     description: DigitalOcean access token for accessing the doctl. 
     required: true
+  do_cluster_certificate:
+    description: DigitalOcean cluster certificate for accessing the kubectl. 
+    required: true
   stdin:
     description: File to read and pass as stdin to kubectl
     required: false
