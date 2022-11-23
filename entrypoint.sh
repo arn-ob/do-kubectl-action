@@ -15,4 +15,3 @@ doctl kubernetes cluster kubeconfig save ${INPUT_DO_CLUSTER_CERTIFICATE}
 echo "Kubectl pod list"
 
 kubectl get pods
-
