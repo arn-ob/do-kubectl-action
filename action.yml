@@ -9,7 +9,7 @@ runs:
   image: 'docker://ghcr.io/arn-ob/do-kubectl-action:latest'
 inputs:
   do_access_token:
-    description: DigitalOcean access token for accessing the doctl.
+    description: DigitalOcean access token for accessing the doctl. 
     required: true
   stdin:
     description: File to read and pass as stdin to kubectl
