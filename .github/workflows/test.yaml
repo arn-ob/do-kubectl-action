@@ -18,3 +18,4 @@ jobs:
         uses: arn-ob/do-kubectl-action@v1.1
         with:
           do_access_token: ${{ secrets.DO_ACCESS_TOKEN }}
+          do_cluster_certificate: ${{ secrets.DO_CLUSTER_CERTIFICATE }}
