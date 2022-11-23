@@ -15,6 +15,6 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Login to GitHub Container Registry
-        uses: ghcr.io/arn-ob/do-kubectl-action:latest
+        uses: arn-ob/do-kubectl-action@latest
         with:
           do_access_token: ${{ secrets.DO_ACCESS_TOKEN }}
