@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  do-kubectl-action:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always    
+    networks:
+      - backend
+  
+networks:
+  backend:    
+    driver: bridge
