@@ -6,6 +6,10 @@ doctl version
 
 echo "DO Token Init"
 
+CHECK="${INPUT_DO_ACCESS_TOKEN}"
+
+echo CHECK
+
 doctl auth init -t "${INPUT_DO_ACCESS_TOKEN}"
 
 echo "DigitalOcean add the cluster kubeconfig"
