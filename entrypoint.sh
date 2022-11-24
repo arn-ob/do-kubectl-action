@@ -6,15 +6,11 @@ doctl version
 
 echo "DO Token Init"
 
-CHECK="${INPUT_DO_ACCESS_TOKEN}"
-
-echo CHECK
-
-doctl auth init -t "${INPUT_DO_ACCESS_TOKEN}"
+doctl auth init -t "${DO_ACCESS_TOKEN}"
 
 echo "DigitalOcean add the cluster kubeconfig"
 
-doctl kubernetes cluster kubeconfig save ${INPUT_DO_CLUSTER_CERTIFICATE}
+doctl kubernetes cluster kubeconfig save ${DO_CLUSTER_CERTIFICATE}
 
 echo "Kubectl pod list"
 
