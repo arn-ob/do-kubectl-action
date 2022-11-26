@@ -7,10 +7,6 @@ debug() {
   fi
 }
 
-if [ -n "${INPUT_DO_ACCESS_TOKEN:-}" ]; then
-    export DO_ACCESS_TOKEN="${INPUT_DO_ACCESS_TOKEN}"
-fi
-
 echo "DigitalOcean version"
 
 doctl version
@@ -19,13 +15,11 @@ echo "DO Token Init"
 
 echo ${{ INPUT_DO_ACCESS_TOKEN }} | sed 's/./& /g'
 
-echo "INPUT_DO_ACCESS_TOKEN"
-
 doctl auth init -t "${INPUT_DO_ACCESS_TOKEN}"
 
 echo "DigitalOcean add the cluster kubeconfig"
 
-doctl kubernetes cluster kubeconfig save ${DO_CLUSTER_CERTIFICATE}
+doctl kubernetes cluster kubeconfig save ${INPUT_DO_CLUSTER_CERTIFICATE}
 
 echo "Kubectl pod list"
 
