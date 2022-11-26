@@ -16,4 +16,7 @@ jobs:
         with:
           do_access_token: ${{ secrets.DO_ACCESS_TOKEN }}
           do_cluster_certificate: ${{ secrets.DO_CLUSTER_CERTIFICATE }}
+          do_deployment_name: ${{ secrets.DO_DEPLOYMENT_NAME }}
+          do_container_name: ${{ secrets.DO_CONTAINER_NAME }}
+          do_image_tag: ${{ secrets.DO_IMAGE_TAG }}
 ```

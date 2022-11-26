@@ -14,6 +14,15 @@ inputs:
   do_cluster_certificate:
     description: DigitalOcean cluster certificate for accessing the kubectl. 
     required: true
+  do_deployment_name:
+    description: kubectl deployment name. 
+    required: true
+  do_container_name:
+    description: kubectl container name. 
+    required: true
+  do_image_tag:
+    description: kubectl image and tag. 
+    required: true
   stdin:
     description: File to read and pass as stdin to kubectl
     required: false

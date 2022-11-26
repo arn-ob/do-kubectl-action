@@ -24,3 +24,7 @@ doctl kubernetes cluster kubeconfig save ${INPUT_DO_CLUSTER_CERTIFICATE}
 echo "Kubectl pod list"
 
 kubectl get pods
+
+echo "Kubectl deployment"
+
+kubectl set image deployment/${INPUT_DO_DEPLOYMENT_NAME} ${INPUT_DO_CONTAINER_NAME}=${INPUT_DO_IMAGE_TAG}
