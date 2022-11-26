@@ -1,5 +1,12 @@
 #!/bin/sh
 
+
+debug() {
+  if [ "${ACTIONS_RUNNER_DEBUG:-}" = "true" ]; then
+    echo "DEBUG: :: $*" >&2
+  fi
+}
+
 if [ -n "${INPUT_DO_ACCESS_TOKEN:-}" ]; then
     export DO_ACCESS_TOKEN="${INPUT_DO_ACCESS_TOKEN}"
 fi
