@@ -24,7 +24,7 @@ jobs:
       - name: Build docker image
         run: |
           if [[ ${{ github.ref }} == 'refs/heads/main' ]]; then
-            tag=v1.13
+            tag=v1.14
           else
             tag=${{ github.sha }}
           fi
