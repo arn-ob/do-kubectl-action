@@ -1,27 +1,27 @@
-name: 'DigitalOcean kubectl'
+name: 'DigitalOcean kubectl Action'
 author: Arnob Almazee
-description: DigitalOcean kubectl in a Github Action
+description: DigitalOcean kubectl image Update by using Github Action
 branding:
-  color: 'green'
+  color: 'blue'
   icon: 'command'
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/arn-ob/do-kubectl-action:latest'
 inputs:
   do_access_token:
-    description: DigitalOcean access token for accessing the doctl. 
+    description: Access token for accessing the doctl. 
     required: true
   do_cluster_certificate:
-    description: DigitalOcean cluster certificate for accessing the kubectl. 
+    description: Cluster certificate for accessing the kubectl. 
     required: true
   do_deployment_name:
-    description: kubectl deployment name. 
+    description: App deployment name. 
     required: true
   do_container_name:
-    description: kubectl container name. 
+    description: App container name. 
     required: true
   do_image_tag:
-    description: kubectl image and tag. 
+    description: App build image and tag. 
     required: true
   stdin:
     description: File to read and pass as stdin to kubectl
