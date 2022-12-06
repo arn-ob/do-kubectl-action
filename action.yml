@@ -31,4 +31,4 @@ inputs:
     required: true
 outputs:
   kubectl-out:
-    description: The output of the kubectl command
+    description: The output of the kubectl command 
