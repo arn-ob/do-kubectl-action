@@ -24,7 +24,7 @@ inputs:
     description: App build image and tag. 
     required: true
   do_namespace:
-    description: Deployment Namespace
+    description: Deployment Namespace 
     required: false
   stdin:
     description: File to read and pass as stdin to kubectl
