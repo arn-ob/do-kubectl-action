@@ -23,12 +23,15 @@ inputs:
   do_image_tag:
     description: App build image and tag. 
     required: true
+  do_namespace:
+    description: Deployment Namespace
+    required: false
   stdin:
     description: File to read and pass as stdin to kubectl
     required: false
   args:
     description: The arguments that you want to pass through to the kubectl command
-    required: true
+    required: false
 outputs:
   kubectl-out:
     description: The output of the kubectl command 
