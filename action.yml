@@ -17,6 +17,10 @@ inputs:
   do_deployment_name:
     description: App deployment name. 
     required: true
+  do_namespace: 
+    description: App namespace name. 
+    required: false
+    default: default
   do_container_name:
     description: App container name. 
     required: true

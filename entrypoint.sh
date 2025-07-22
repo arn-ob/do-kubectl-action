@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 debug() {
   if [ "${ACTIONS_RUNNER_DEBUG:-}" = "true" ]; then
     echo "DEBUG: :: $*" >&2
@@ -21,4 +20,4 @@ doctl kubernetes cluster kubeconfig save ${INPUT_DO_CLUSTER_CERTIFICATE}
 
 echo "Kubectl deployment"
 
-kubectl set image deployment/${INPUT_DO_DEPLOYMENT_NAME} ${INPUT_DO_CONTAINER_NAME}=${INPUT_DO_IMAGE_TAG}
+kubectl set image -n ${INPUT_DO_NAMESPACE} deployment/${INPUT_DO_DEPLOYMENT_NAME} ${INPUT_DO_CONTAINER_NAME}=${INPUT_DO_IMAGE_TAG}
