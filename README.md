@@ -38,5 +38,24 @@ jobs:
           do_deployment_name: deploy-app
           do_container_name: deploy-app
           do_image_tag: <username>/<image-name>:<image-tag>
+```
 
+If you wanted to add namespace then 
+
+```yaml
+jobs:
+  update-image:
+    name: Build docker image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Push the build image to the DO kubectl
+        uses: arn-ob/do-kubectl-action@main
+        with:
+          do_access_token: ${{ secrets.DO_ACCESS_TOKEN }}
+          do_cluster_certificate: ${{ secrets.DO_CLUSTER_CERTIFICATE }}
+          do_deployment_name: deploy-app
+          do_container_name: deploy-app
+          do_image_tag: <username>/<image-name>:<image-tag>
+          do_namespace: stage
 ```
