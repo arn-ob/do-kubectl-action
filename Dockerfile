@@ -4,9 +4,9 @@ LABEL maintainer="Arnob Almazee <github.com@arn-ob>"
 
 RUN apk add --no-cache curl
 
-RUN wget https://github.com/digitalocean/doctl/releases/download/v1.84.0/doctl-1.84.0-linux-amd64.tar.gz
+RUN wget https://github.com/digitalocean/doctl/releases/download/v1.135.0/doctl-1.135.0-linux-amd64.tar.gz
 
-RUN tar -xf doctl-1.84.0-linux-amd64.tar.gz -C ~/
+RUN tar -xf doctl-1.135.0-linux-amd64.tar.gz -C ~/
 
 RUN chmod +x ~/doctl
 
